@@ -1,0 +1,61 @@
+{
+  "name": "buycantaba",
+  "description": "Buy Cantaba - Land For Sale in Santa Rita, Samar, Philippines.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/buycantaba/buycantaba.git",
+  "author": "hello@adelonzeta.com",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-beta.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^15.0.0",
+    "browserify-shim": "^3.8.14",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-connect": "^5.2.0",
+    "gulp-defer": "^1.1.2",
+    "gulp-eslint": "^4.0.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-open": "^2.1.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-lint": "^1.3.4",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-task-loader": "^1.4.4",
+    "panini": "^1.5.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "popper": "./node_modules/popper.js/dist/umd/popper.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "popper": "Popper"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "start": "gulp",
+    "serve": "gulp serve",
+    "prod": "gulp prod",
+    "deploy": "gulp deploy",
+    "clean": "gulp site:clean"
+  }
+}
