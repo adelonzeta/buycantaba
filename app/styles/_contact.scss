@@ -1,0 +1,74 @@
+.contact {
+  @include clearfix;
+  background: $darkgreen;
+  color: $white;
+  padding: 120px 0;
+
+  h2 {
+    text-align: center;
+    font-size: 45px;
+    line-height: 60px;
+    font-weight: $font-weight-sans-light;
+    margin-bottom: 30px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: $font-weight-sc-medium;
+    font-family: $font-family-sc;
+    text-transform: lowercase;
+    margin-bottom: 60px;
+  }
+
+  .form-group {
+    background: $white;
+    margin-bottom: 30px;
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+  }
+
+  .form-control {
+    font-size: 26px;
+    line-height: 45px;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+
+    &:focus,
+    &:active {
+      border: none;
+    }
+  }
+
+  input.form-control,
+  select.form-control:not([size]):not([multiple]) {
+    height: 75px;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  textarea.form-control {
+    resize: none;
+  }
+
+  button {
+    font-size: 26px;
+    line-height: 45px;
+    letter-spacing: 2px;
+    height: 75px;
+    width: 225px;
+    text-transform: lowercase;
+    cursor: pointer;
+    font-family: $font-family-sc;
+    font-weight: $font-weight-sc-medium;
+    color: $white;
+  }
+}

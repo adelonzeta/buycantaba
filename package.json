@@ -6,10 +6,31 @@
   "repository": "https://github.com/buycantaba/buycantaba.git",
   "author": "hello@adelonzeta.com",
   "license": "MIT",
+  "browser": {
+    "jquery": "./node_modules/jquery/dist/jquery.js",
+    "popper": "./node_modules/popper.js/dist/umd/popper.js"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "popper": "Popper"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "start": "gulp",
+    "serve": "gulp serve",
+    "prod": "gulp prod",
+    "deploy": "gulp deploy",
+    "clean": "gulp site:clean"
+  },
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
+    "jquery-smooth-scroll": "^2.2.0",
     "popper.js": "^1.12.9"
   },
   "devDependencies": {
@@ -37,25 +58,5 @@
     "gulp-task-loader": "^1.4.4",
     "panini": "^1.5.1",
     "vinyl-source-stream": "^2.0.0"
-  },
-  "browser": {
-    "jquery": "./node_modules/jquery/dist/jquery.js",
-    "popper": "./node_modules/popper.js/dist/umd/popper.js"
-  },
-  "browserify-shim": {
-    "jquery": "$",
-    "popper": "Popper"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
-  "scripts": {
-    "start": "gulp",
-    "serve": "gulp serve",
-    "prod": "gulp prod",
-    "deploy": "gulp deploy",
-    "clean": "gulp site:clean"
   }
 }

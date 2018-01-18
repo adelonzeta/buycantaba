@@ -4,18 +4,48 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ title }} - Buy Cantaba</title>
-    <!--defer-->
+    <title>{{ title }} &mdash; Land For Sale in Santa Rita, Samar, Philippines</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500|Alegreya+Sans:300,400,700">
     <link rel="stylesheet" href="{{root}}styles/app.css">
-    <!--enddefer-->
-    <link href="{{root}}images/favicon.ico" rel="icon" type="image/png">
+    <link rel="icon" href="{{root}}images/favicon.ico" type="image/png">
   </head>
   <body>
     <main>
       {{> body }}
     </main>
-    <!--defer-->
+    <script type="text/javascript">
+      function initMap() {
+      var map = new google.maps.Map(document.getElementById('blueprint'), {
+        zoom: 19,
+        center: {lat: 11.34381309862127, lng: 125.02933323383331},
+        mapTypeId: 'hybrid'
+      });
+
+      var triangleCoords = [
+        {lat: 11.34425490649649  , lng: 125.02857685089111},
+        {lat: 11.344236497848701 , lng: 125.02983748912811},
+        {lat: 11.343618492554718 , lng: 125.03024250268936},
+        {lat: 11.34310567863594  , lng: 125.03030151128769},
+        {lat: 11.343308174498482 , lng: 125.02993404865265},
+        {lat: 11.343510670217416 , lng: 125.0297623872757},
+        {lat: 11.34320298186051  , lng: 125.02961754798889},
+        {lat: 11.343431775798532 , lng: 125.02865463495255},
+        {lat: 11.34381572815839  , lng: 125.02864927058681}
+      ];
+
+      // Construct the polygon.
+      var bermudaTriangle = new google.maps.Polygon({
+        paths: triangleCoords,
+        strokeColor: '#99D5C9',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#6C969D',
+        fillOpacity: 0.35
+      });
+      bermudaTriangle.setMap(map);
+      }
+    </script>
     <script type="text/javascript" src="{{root}}scripts/app.js"></script>
-    <!--enddefer-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_nrZm8MOFNjzkQ8EHVybaFOxqI7GRRjw&callback=initMap"></script>
   </body>
 </html>

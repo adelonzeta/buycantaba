@@ -1,0 +1,87 @@
+%nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin-left: 45px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  a {
+    color: $white;
+    font-family: $font-family-sc;
+    font-size: 20px;
+    font-weight: $font-weight-sc-medium;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    text-decoration: none;
+    transition: $base-transition;
+
+    &:hover {
+      color: $wintergreen;
+    }
+  }
+}
+
+.navigation {
+
+  padding: 60px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: $base-transition;
+  z-index: 1;
+
+  & > .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  @include element('sections') {
+    @extend %nav-links;
+  }
+
+  @include element('social') {
+    @extend %nav-links;
+  }
+
+  @include modifier('inverse') {
+    background: $white;
+    padding: 30px 0;
+
+    a {
+      color: $darkgreen;
+    }
+
+    #antaba,
+    #Fill-1,
+    #Fill-10 {
+      fill: $darkgreen;
+    }
+
+    #Fill-3,
+    #Fill-5 {
+      fill: $spanishgray;
+    }
+
+    #Fill-8 {
+      fill: $wintergreen;
+    }
+
+    .facebook {
+      color: $facebook;
+    }
+
+    .instagram {
+      color: $instagram;
+    }
+  }
+}

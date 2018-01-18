@@ -1,42 +1,35 @@
-$blue: #3d8abf;
-$riflegreen: #26cad3;
+// Colors
+$white       : #fff;
+$platinum    : #dee5e5;
+$meadow      : #17b890;
+$wintergreen : #5e807f;
+$darkgreen   : #082d0f;
+$spanishgray : #95a08a;
+$facebook    : #3b5998;
+$instagram   : #fb3958;
+
+$primary: $meadow;
 
 // Typography
-$font-family-base   : acumin-pro, sans-serif;
-$font-size-base     : 1rem;
-$font-weight-light  : 300;
-$font-weight-normal : 400;
-$font-weight-medium : 500;
-$font-weight-bold   : 600;
+$font-family-base         : 'Alegreya Sans', sans-serif;
+$font-family-sc           : 'Alegreya Sans SC', sans-serif;
+$font-weight-sans-light   : 300;
+$font-weight-sans-regular : 400;
+$font-weight-sans-bold    : 700;
+$font-weight-sc-regular   : 400;
+$font-weight-sc-medium    : 500;
 
-$line-height-base: 1.125;
+$font-size-small   : 15px;
+$font-size-p       : 20px;
+$font-size-h3      : 30px;
+$font-size-h2      : 45px;
+$font-size-h1      : 60px;
 
-$lead-font-size : $font-size-base * 1.375;
-$h1-font-size   : $font-size-base * 2.875;
-$h3-font-size   : $font-size-base * 2.25;
+$line-height-small : 15px;
+$line-height-p     : 30px;
+$line-height-h3    : 45px;
+$line-height-h2    : 60px;
+$line-height-h1    : 75px;
 
-$grid-gutter-width: 40px;
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1225px
-);
-$border-radius: 0.375rem;
-
-$base-timing: 0.4s;
-$transition-base: all $base-timing ease-in-out;
-$transition-fade: opacity $base-timing linear;
-$btn-transition: background-color $base-timing ease-in-out, border-color $base-timing ease-in-out, box-shadow $base-timing ease-in-out;
-
-
-$input-btn-padding-y: 0.625rem;
-$input-btn-padding-x: 1.438rem;
-
-$input-border-color: #d4dbe0;
-
-$base-layout-bg-left      : rgba(238, 243, 246, 0.3);
-$base-layout-bg-right     : #ebf1f5;
-
-$paragraph-color: #333748;
-$gray-section-bg: #fafafa;
+$border-radius: 0;
+$base-transition: 0.3s;
