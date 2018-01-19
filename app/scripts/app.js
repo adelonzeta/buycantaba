@@ -18,4 +18,4 @@ $(document).ready(function() {
   })
 })
 
-$('.scroll-link').smoothScroll({ offset: -112 })
+$('.scroll-link').smoothScroll({ offset: - 105 })

@@ -4,12 +4,22 @@
   color: $white;
   padding: 120px 0;
 
+  @include media-breakpoint-down(sm) {
+    padding: 75px 0;
+  }
+
   h2 {
     text-align: center;
     font-size: 45px;
     line-height: 60px;
     font-weight: $font-weight-sans-light;
     margin-bottom: 30px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 15px;
+    }
   }
 
   p {
@@ -21,6 +31,12 @@
     font-family: $font-family-sc;
     text-transform: lowercase;
     margin-bottom: 60px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 45px;
+      font-size: 14px;
+      line-height: 15px;
+    }
   }
 
   .form-group {
@@ -28,10 +44,21 @@
     margin-bottom: 30px;
     position: relative;
 
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 15px;
+    }
+
     .arrow {
       position: absolute;
       right: 30px;
       top: 30px;
+
+      @include media-breakpoint-down(sm) {
+        width: 22px;
+        height: 9px;
+        right: 15px;
+        top: 26px;
+      }
     }
   }
 
@@ -41,6 +68,12 @@
     padding: 15px 30px;
     border: none;
     outline: none;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 15px;
+      line-height: 30px;
+      padding: 15px;
+    }
 
     &:focus,
     &:active {
@@ -53,6 +86,10 @@
     height: 75px;
     appearance: none;
     -webkit-appearance: none;
+
+    @include media-breakpoint-down(sm) {
+      height: 60px;
+    }
   }
 
   textarea.form-control {
@@ -70,5 +107,9 @@
     font-family: $font-family-sc;
     font-weight: $font-weight-sc-medium;
     color: $white;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
   }
 }

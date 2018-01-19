@@ -7,6 +7,10 @@
     display: inline-block;
     margin-left: 45px;
 
+    @include media-breakpoint-down(sm) {
+      margin-left: 30px;
+    }
+
     &:first-child {
       margin: 0;
     }
@@ -30,7 +34,6 @@
 }
 
 .navigation {
-
   padding: 60px 0;
   position: fixed;
   top: 0;
@@ -38,15 +41,34 @@
   transition: $base-transition;
   z-index: 1;
 
+  @include media-breakpoint-down(sm) {
+    padding: 30px 0;
+  }
+
   & > .container {
     align-items: center;
     display: flex;
     justify-content: space-between;
   }
 
+  @include element('branding') {
+    @extend .text-hide;
+
+    width: 115px;
+    height: 45px;
+    color: $white;
+    font-family: $font-family-sc;
+    letter-spacing: 2px;
+    font-weight: $font-weight-sc-medium;
+    background: url('../images/logo.png') no-repeat top;
+  }
 
   @include element('sections') {
     @extend %nav-links;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
   }
 
   @include element('social') {
@@ -61,27 +83,17 @@
       color: $darkgreen;
     }
 
-    #antaba,
-    #Fill-1,
-    #Fill-10 {
-      fill: $darkgreen;
-    }
-
-    #Fill-3,
-    #Fill-5 {
-      fill: $spanishgray;
-    }
-
-    #Fill-8 {
-      fill: $wintergreen;
-    }
-
     .facebook {
       color: $facebook;
     }
 
     .instagram {
       color: $instagram;
+    }
+
+    .navigation__branding {
+      background-position: bottom;
+      color: $darkgreen;
     }
   }
 }

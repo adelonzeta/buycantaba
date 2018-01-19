@@ -1,7 +1,7 @@
 #features {
   .carousel-item {
     background: $spanishgray;
-    height: calc(100vh - 112px);
+    height: calc(100vh - 105px);
 
     img {
       position: absolute;
@@ -10,6 +10,11 @@
       object-fit: cover;
       width: 60%;
       height: 100%;
+
+      @include media-breakpoint-down(sm) {
+        height: calc(100% - 150px);
+        width: 100%;
+      }
     }
   }
 
@@ -24,6 +29,13 @@
     align-items: center;
     justify-content: center;
 
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 150px;
+      bottom: 0;
+      top: auto;
+    }
+
     span {
       text-transform: lowercase;
       font-size: 20px;
@@ -33,6 +45,12 @@
       color: $spanishgray;
       margin-bottom: 60px;
       display: block;
+
+      @include media-breakpoint-down(sm) {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 15px;
+      }
     }
 
     strong {
@@ -42,6 +60,13 @@
       font-weight: $font-weight-sans-light;
       color: $meadow;
       margin-bottom: 60px;
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 15px;
+        line-height: 30px;
+        font-size: 23px;
+        display: inline-block;
+      }
     }
 
     h3 {
@@ -49,15 +74,32 @@
       line-height: 45px;
       font-weight: $font-weight-sans-light;
       margin-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
   }
 
   .carousel-caption-inner {
     max-width: 290px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      max-width: 100%;
+      padding: 0 30px;
+      text-align: center;
+    }
   }
 
   .carousel-control-prev, .carousel-control-next {
     width: 10%;
+
+    @include media-breakpoint-down(sm) {
+      width: 20%;
+      height: calc(100% - 150px);
+    }
   }
 
   .carousel-control-prev-icon {

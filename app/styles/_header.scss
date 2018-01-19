@@ -1,5 +1,5 @@
 .header {
-  background-color: $wintergreen;
+  background-color: $meadow;
   background-image: url('../images/header.jpg');
   background-position: left top;
   background-repeat: no-repeat;
@@ -11,6 +11,10 @@
     justify-content: flex-end;
     height: 100vh;
     padding-bottom: 135px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 0;
+    }
   }
 
   p {
@@ -22,6 +26,11 @@
     letter-spacing: 2px;
     text-transform: lowercase;
     margin-bottom: 45px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 15px;
+      line-height: 15px;
+    }
   }
 
   h1 {
@@ -31,6 +40,12 @@
     line-height: 75px;
     margin-bottom: 0;
     max-width: 825px;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      line-height: 45px;
+      margin-bottom: 120px;
+    }
   }
 }
 
@@ -38,6 +53,11 @@
   display: flex;
   height: 225px;
   margin: 0;
+
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+    height: auto;
+  }
 
   & > small,
   & > span {
@@ -49,7 +69,7 @@
 
   & > small {
     width: 40%;
-    background: rgba(94,128,127,0.60);
+    background: rgba(23,184,144,0.70);
     font-size: 30px;
     line-height: 45px;
     letter-spacing: 2px;
@@ -58,8 +78,19 @@
     font-family: $font-family-sc;
     font-weight: $font-weight-sc-regular;
 
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      height: 75px;
+      font-size: 15px;
+      line-height: 30px;
+    }
+
     i {
       margin-left: 30px;
+
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
     }
   }
 
@@ -71,11 +102,21 @@
     font-size: 45px;
     font-weight: $font-weight-sans-regular;
 
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+      line-height: 60px;
+      height: 120px;
+    }
+
     strong {
       font-weight: $font-weight-sans-bold;
       font-size: 60px;
       margin-right: 15px;
-      letter-spacing: 4px;
+      letter-spacing: 2px;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 45px;
+      }
     }
   }
 }
