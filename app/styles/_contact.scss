@@ -9,11 +9,11 @@
   }
 
   h2 {
-    text-align: center;
     font-size: 45px;
-    line-height: 60px;
     font-weight: $font-weight-sans-light;
+    line-height: 60px;
     margin-bottom: 30px;
+    text-align: center;
 
     @include media-breakpoint-down(sm) {
       font-size: 30px;
@@ -23,19 +23,19 @@
   }
 
   p {
-    text-align: center;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 2px;
-    font-weight: $font-weight-sc-medium;
     font-family: $font-family-sc;
-    text-transform: lowercase;
+    font-size: 20px;
+    font-weight: $font-weight-sc-medium;
+    letter-spacing: 2px;
+    line-height: 30px;
     margin-bottom: 60px;
+    text-align: center;
+    text-transform: lowercase;
 
     @include media-breakpoint-down(sm) {
-      margin-bottom: 45px;
       font-size: 14px;
       line-height: 15px;
+      margin-bottom: 45px;
     }
   }
 
@@ -54,20 +54,20 @@
       top: 30px;
 
       @include media-breakpoint-down(sm) {
-        width: 22px;
         height: 9px;
         right: 15px;
         top: 26px;
+        width: 22px;
       }
     }
   }
 
   .form-control {
+    border: 0;
     font-size: 26px;
     line-height: 45px;
-    padding: 15px 30px;
-    border: none;
     outline: none;
+    padding: 15px 30px;
 
     @include media-breakpoint-down(sm) {
       font-size: 15px;
@@ -77,36 +77,51 @@
 
     &:focus,
     &:active {
-      border: none;
+      border: 0;
     }
   }
 
-  input.form-control,
-  select.form-control:not([size]):not([multiple]) {
-    height: 75px;
-    appearance: none;
-    -webkit-appearance: none;
+  input {
+    &.form-control {
+      appearance: none;
+      height: 75px;
 
-    @include media-breakpoint-down(sm) {
-      height: 60px;
+      @include media-breakpoint-down(sm) {
+        height: 60px;
+      }
     }
   }
 
-  textarea.form-control {
-    resize: none;
+  select {
+    &.form-control {
+      &:not([size]):not([multiple]) { // sass-lint:disable-line force-pseudo-nesting
+        appearance: none;
+        height: 75px;
+
+        @include media-breakpoint-down(sm) {
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  textarea {
+    &.form-control {
+      resize: none;
+    }
   }
 
   button {
-    font-size: 26px;
-    line-height: 45px;
-    letter-spacing: 2px;
-    height: 75px;
-    width: 225px;
-    text-transform: lowercase;
+    color: $white;
     cursor: pointer;
     font-family: $font-family-sc;
+    font-size: 26px;
     font-weight: $font-weight-sc-medium;
-    color: $white;
+    height: 75px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    text-transform: lowercase;
+    width: 225px;
 
     @include media-breakpoint-down(sm) {
       width: 100%;

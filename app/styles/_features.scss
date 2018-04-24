@@ -1,15 +1,15 @@
-#features {
+#features { // sass-lint:disable-line no-ids
   .carousel-item {
     background: $spanishgray;
     height: calc(100vh - 105px);
 
     img {
-      position: absolute;
-      top: 0;
-      right: 0;
-      object-fit: cover;
-      width: 60%;
       height: 100%;
+      object-fit: cover;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 60%;
 
       @include media-breakpoint-down(sm) {
         height: calc(100% - 150px);
@@ -19,60 +19,60 @@
   }
 
   .carousel-caption {
-    background: $darkgreen;
-    top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-    text-align: left;
-    display: flex;
     align-items: center;
+    background: $darkgreen;
+    display: flex;
+    height: 100%;
     justify-content: center;
+    left: 0;
+    text-align: left;
+    top: 0;
+    width: 40%;
 
     @include media-breakpoint-down(sm) {
-      width: 100%;
-      height: 150px;
       bottom: 0;
+      height: 150px;
       top: auto;
+      width: 100%;
     }
 
     span {
-      text-transform: lowercase;
-      font-size: 20px;
-      line-height: 30px;
-      font-family: $font-family-sc;
-      font-weight: $font-weight-sc-regular;
       color: $spanishgray;
-      margin-bottom: 60px;
       display: block;
+      font-family: $font-family-sc;
+      font-size: 20px;
+      font-weight: $font-weight-sc-regular;
+      line-height: 30px;
+      margin-bottom: 60px;
+      text-transform: lowercase;
 
       @include media-breakpoint-down(sm) {
         display: inline-block;
-        margin-right: 5px;
         margin-bottom: 15px;
+        margin-right: 5px;
       }
     }
 
     strong {
+      color: $meadow;
       display: block;
       font-size: 142px;
-      line-height: 120px;
       font-weight: $font-weight-sans-light;
-      color: $meadow;
+      line-height: 120px;
       margin-bottom: 60px;
 
       @include media-breakpoint-down(sm) {
-        margin-bottom: 15px;
-        line-height: 30px;
-        font-size: 23px;
         display: inline-block;
+        font-size: 23px;
+        line-height: 30px;
+        margin-bottom: 15px;
       }
     }
 
     h3 {
       font-size: 30px;
-      line-height: 45px;
       font-weight: $font-weight-sans-light;
+      line-height: 45px;
       margin-bottom: 0;
 
       @include media-breakpoint-down(sm) {
@@ -86,31 +86,32 @@
     max-width: 290px;
 
     @include media-breakpoint-down(sm) {
-      width: 100%;
       max-width: 100%;
       padding: 0 30px;
       text-align: center;
+      width: 100%;
     }
   }
 
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 10%;
 
     @include media-breakpoint-down(sm) {
-      width: 20%;
       height: calc(100% - 150px);
+      width: 20%;
     }
   }
 
   .carousel-control-prev-icon {
     background-image: url('../images/arrow-left.png');
-    width: 40px;
     height: 73px;
+    width: 40px;
   }
 
   .carousel-control-next-icon {
     background-image: url('../images/arrow-right.png');
-    width: 40px;
     height: 73px;
+    width: 40px;
   }
 }

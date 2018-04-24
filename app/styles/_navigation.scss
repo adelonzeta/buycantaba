@@ -21,10 +21,10 @@
     font-family: $font-family-sc;
     font-size: 20px;
     font-weight: $font-weight-sc-medium;
-    line-height: 30px;
     letter-spacing: 2px;
-    text-transform: lowercase;
+    line-height: 30px;
     text-decoration: none;
+    text-transform: lowercase;
     transition: $base-transition;
 
     &:hover {
@@ -37,8 +37,8 @@
   padding: 60px 0;
   position: fixed;
   top: 0;
-  width: 100%;
   transition: $base-transition;
+  width: 100%;
   z-index: 1;
 
   @include media-breakpoint-down(sm) {
@@ -52,19 +52,18 @@
   }
 
   @include element('branding') {
-    @extend .text-hide;
-
-    width: 115px;
-    height: 45px;
+    @extend .text-hide; // sass-lint:disable-line placeholder-in-extend
+    background: url('../images/logo.png') no-repeat top;
     color: $white;
     font-family: $font-family-sc;
-    letter-spacing: 2px;
     font-weight: $font-weight-sc-medium;
-    background: url('../images/logo.png') no-repeat top;
+    height: 45px;
+    letter-spacing: 2px;
+    width: 115px;
   }
 
   @include element('sections') {
-    @extend %nav-links;
+    @extend %nav-links; // sass-lint:disable-line space-around-operator
 
     @include media-breakpoint-down(sm) {
       display: none;
@@ -72,7 +71,7 @@
   }
 
   @include element('social') {
-    @extend %nav-links;
+    @extend %nav-links; // sass-lint:disable-line space-around-operator
   }
 
   @include modifier('inverse') {
@@ -91,7 +90,7 @@
       color: $instagram;
     }
 
-    .navigation__branding {
+    .navigation__branding { // sass-lint:disable-line class-name-format
       background-position: bottom;
       color: $darkgreen;
     }

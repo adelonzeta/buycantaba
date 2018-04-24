@@ -1,6 +1,8 @@
+$header-background-1: rgba(23, 184, 144, 0.7);
+$header-background-2: rgba(23, 184, 144, 0.6);
+
 .header {
   background-color: $meadow;
-  background-image: url('../images/header.jpg');
   background-position: left top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,8 +10,8 @@
   & > .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     height: 100vh;
+    justify-content: flex-end;
     padding-bottom: 135px;
 
     @include media-breakpoint-down(sm) {
@@ -20,12 +22,12 @@
   p {
     color: $white;
     font-family: $font-family-sc;
-    font-weight: $font-weight-sc-regular;
     font-size: 30px;
-    line-height: 45px;
+    font-weight: $font-weight-sc-regular;
     letter-spacing: 2px;
-    text-transform: lowercase;
+    line-height: 45px;
     margin-bottom: 45px;
+    text-transform: lowercase;
 
     @include media-breakpoint-down(sm) {
       font-size: 15px;
@@ -61,28 +63,28 @@
 
   & > small,
   & > span {
-    height: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 100%;
     justify-content: center;
   }
 
   & > small {
-    width: 40%;
-    background: rgba(23,184,144,0.70);
-    font-size: 30px;
-    line-height: 45px;
-    letter-spacing: 2px;
+    background: $header-background-1;
     color: $white;
-    text-transform: lowercase;
     font-family: $font-family-sc;
+    font-size: 30px;
     font-weight: $font-weight-sc-regular;
+    letter-spacing: 2px;
+    line-height: 45px;
+    text-transform: lowercase;
+    width: 40%;
 
     @include media-breakpoint-down(sm) {
-      width: 100%;
-      height: 75px;
       font-size: 15px;
+      height: 75px;
       line-height: 30px;
+      width: 100%;
     }
 
     i {
@@ -95,24 +97,24 @@
   }
 
   & > span {
-    background: rgba(23,184,144,0.60);
-    flex: 1;
+    background: $header-background-2;
     color: $white;
-    line-height: 75px;
+    flex: 1;
     font-size: 45px;
     font-weight: $font-weight-sans-regular;
+    line-height: 75px;
 
     @include media-breakpoint-down(sm) {
       font-size: 30px;
-      line-height: 60px;
       height: 120px;
+      line-height: 60px;
     }
 
     strong {
-      font-weight: $font-weight-sans-bold;
       font-size: 60px;
-      margin-right: 15px;
+      font-weight: $font-weight-sans-bold;
       letter-spacing: 2px;
+      margin-right: 15px;
 
       @include media-breakpoint-down(sm) {
         font-size: 45px;
