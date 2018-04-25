@@ -3,8 +3,15 @@ import 'popper.js'
 import 'bootstrap'
 import 'jquery-smooth-scroll'
 import 'jquery-lazy'
+import database from './database'
+import contact from './contact'
 
 $(document).ready(function() {
+  (function() {
+    database.init()
+    contact.init()
+  })()
+
   $('.lazy').Lazy({
     enableThrottle: true,
     throttle: 250

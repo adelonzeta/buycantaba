@@ -83,6 +83,7 @@
 
   input {
     &.form-control {
+      -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
       appearance: none;
       height: 75px;
 
@@ -95,6 +96,7 @@
   select {
     &.form-control {
       &:not([size]):not([multiple]) { // sass-lint:disable-line force-pseudo-nesting
+        -webkit-appearance: none; // sass-lint:disable-line no-vendor-prefixes
         appearance: none;
         height: 75px;
 
@@ -121,10 +123,6 @@
     letter-spacing: 2px;
     line-height: 45px;
     text-transform: lowercase;
-    width: 225px;
-
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-    }
+    width: 100%;
   }
 }

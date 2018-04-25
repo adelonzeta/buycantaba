@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
+    "firebase": "^4.13.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",
     "jquery-lazy": "^1.7.7",

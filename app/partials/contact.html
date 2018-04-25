@@ -2,9 +2,9 @@
   <div class="container">
     <h2>Ready to talk?</h2>
     <p>Send a bid, schedule a tour, or just say hello</p>
-    <form action="https://formspree.io/contact@buycantaba.com" method="POST">
+    <form id="contact-form">
       <div class="form-group">
-        <select class="form-control" name="Subject">
+        <select id="contact-type" class="form-control" name="Subject">
           <option>Send a Bid</option>
           <option>Schedule a Tour</option>
           <option>Say Hello</option>
@@ -14,36 +14,24 @@
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" name="Full Name" class="form-control" placeholder="Full Name *" required>
+            <input id="contact-name" type="text" name="Full Name" class="form-control" placeholder="Full Name *" required>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" name="Company" class="form-control" placeholder="Company or organization">
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <input type="email" name="Email address" class="form-control" placeholder="Email address *" required>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <input type="number" name="Phone number" class="form-control" placeholder="Phone number">
+            <input id="contact-email" type="email" name="Email address" class="form-control" placeholder="Email address *" required>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" name="Location" class="form-control" placeholder="Location">
+            <input id="contact-number" type="number" name="Phone number" class="form-control" placeholder="Phone number">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <select class="form-control" name="How did you hear about Cantaba?">
+            <select id="contact-reference" class="form-control" name="How did you hear about Cantaba?">
               <option selected hidden value="">How did you hear about Cantaba?</option>
               <option>Google search</option>
               <option>Facebook</option>
@@ -55,12 +43,9 @@
         </div>
       </div>
       <div class="form-group">
-        <textarea class="form-control" name="Message" rows="3" placeholder="Message"></textarea>
+        <textarea id="contact-message" class="form-control" name="Message" rows="3" placeholder="Message"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary float-right">Submit</button>
-
-      <!-- hidden inputs -->
-      <input type="hidden" name="_next" value="http://www.buycantaba.com" />
+      <button id="contact-button" type="submit" class="btn btn-primary float-right">Submit</button>
     </form>
 
   </div>
