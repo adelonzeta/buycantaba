@@ -30,7 +30,13 @@ const contact = {
   getID() {
     let param = window.location.search.slice(1)
     let id = param.slice(4, param.length)
-    if (id) this.data.form.id = id
+    let hasRef = window.localStorage.getItem('refNumber')
+    if (hasRef) {
+      this.data.form.id = hasRef
+    } else if (id) {
+      window.localStorage.setItem('refNumber', id)
+      this.data.form.id = id
+    }
   },
   setValues() {
     this.data.form.type = this.$type.val()
