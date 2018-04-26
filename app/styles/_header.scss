@@ -17,6 +17,11 @@ $header-background-2: rgba(23, 184, 144, 0.6);
     @include media-breakpoint-down(sm) {
       padding-bottom: 0;
     }
+
+    @media only screen and (max-height: 568px) {
+      height: auto;
+      padding-top: 300px;
+    }
   }
 
   p {
