@@ -97,3 +97,4 @@ typings/
 
 .publish/
 dist
+app/scripts/database.js
